@@ -61,6 +61,61 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-linux-common" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/17/linux-common/" class="article-date">
+  <time datetime="2017-05-17T09:20:05.024Z" itemprop="datePublished">2017-05-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/17/linux-common/">Linux命令</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>[TOC]</p>
+<h3 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h3><h4 id="tail"><a href="#tail" class="headerlink" title="tail"></a>tail</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">tailf test.log</div><div class="line">tail -f test.log</div></pre></td></tr></table></figure>
+<h4 id="cat、tail、head-结合"><a href="#cat、tail、head-结合" class="headerlink" title="cat、tail、head 结合"></a>cat、tail、head 结合</h4><p>显示一个文件中的某几行(中间几行)</p>
+<p>从第3000行开始，显示1000行。即显示3000~3999行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat fillname | tail -n +3000 | head -n 1000</div></pre></td></tr></table></figure></p>
+<p>显示1000行到3000行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cat filename | tail -n +1000|head -n 2000</div><div class="line">cat filename | head -n 3000 | tail -n +1000</div></pre></td></tr></table></figure></p>
+<p>*注意两种方法的顺序<br>分解<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">tailf -n 1000  显示最后1000行</div><div class="line">tailf -n +1000 从1000行开始显示，显示1000行之后的</div><div class="line">head -n 1000 显示前面1000行</div></pre></td></tr></table></figure></p>
+<h6 id="cat-功能简介："><a href="#cat-功能简介：" class="headerlink" title="cat 功能简介："></a>cat 功能简介：</h6><p>1.一次显示整个文件。$ cat filename<br>2.从键盘创建一个文件。$ cat &gt; filename<br>只能创建新文件,不能编辑已有文件.<br>3.将几个文件合并为一个文件： $cat file1 file2 &gt; file<br>参数：<br>-n 或 –number 由 1 开始对所有输出的行数编号<br>-b 或 –number-nonblank 和 -n 相似，只不过对于空白行不编号<br>-s 或 –squeeze-blank 当遇到有连续两行以上的空白行，就代换为一行的空白行<br>-v 或 –show-nonprinting</p>
+<p>示例：<br>把 textfile1 的档案内容加上行号后输入 textfile2 这个档案里<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat -n textfile1 &gt; textfile2</div></pre></td></tr></table></figure></p>
+<p>把 textfile1 和 textfile2 的档案内容加上行号（空白行不加）之后将内容附加到 textfile3 里。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat -b textfile1 textfile2 &gt;&gt; textfile3</div></pre></td></tr></table></figure></p>
+<p>把test.txt文件扔进垃圾箱，赋空值test.txt<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /dev/null &gt; /etc/test.txt</div></pre></td></tr></table></figure></p>
+<p>注意：&gt;意思是创建，&gt;&gt;是追加。千万不要弄混了。</p>
+<h4 id="sed"><a href="#sed" class="headerlink" title="sed"></a>sed</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed -n &apos;5,10p&apos; filename</div></pre></td></tr></table></figure>
+<h4 id="tac"><a href="#tac" class="headerlink" title="tac"></a>tac</h4><p>tac 是将 cat 反写过来，所以他的功能就跟 cat 相反， cat 是由第一行到最后一行连续显示在萤幕上，<br>而 tac 则是由最后一行到第一行反向在萤幕上显示出来！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/05/17/linux-common/" data-id="cj2su88sq0000c8j5x8sz8h00" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/commend/">commend</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-mysql" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/05/17/mysql/" class="article-date">
@@ -88,7 +143,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>本文记录一些mysql的一些小的知识点。</p>
-<p>###sql注入<br>所谓SQL注入，就是通过把SQL命令插入到Web表单提交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令。具体来说，它是利用现有应用程序，将（恶意的）SQL命令注入到后台数据库引擎执行的能力，它可以通过在Web表单中输入（恶意）SQL语句得到一个存在安全漏洞的网站上的数据库，而不是按照设计者意图去执行SQL语句。[1]  比如先前的很多影视网站泄露VIP会员密码大多就是通过WEB表单递交查询字符暴出的，这类表单特别容易受到SQL注入式攻击。</p>
+<h3 id="sql注入"><a href="#sql注入" class="headerlink" title="sql注入"></a>sql注入</h3><p>所谓SQL注入，就是通过把SQL命令插入到Web表单提交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令。具体来说，它是利用现有应用程序，将（恶意的）SQL命令注入到后台数据库引擎执行的能力，它可以通过在Web表单中输入（恶意）SQL语句得到一个存在安全漏洞的网站上的数据库，而不是按照设计者意图去执行SQL语句。[1]  比如先前的很多影视网站泄露VIP会员密码大多就是通过WEB表单递交查询字符暴出的，这类表单特别容易受到SQL注入式攻击。</p>
 <h5 id="下面是一些示例"><a href="#下面是一些示例" class="headerlink" title="下面是一些示例"></a>下面是一些示例</h5><ol>
 <li>后台身份验证绕过漏洞</li>
 </ol>
@@ -98,7 +153,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/17/mysql/" data-id="cj2sowkbl0003ycj54gvym8lc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/17/mysql/" data-id="cj2su88sx0001c8j53h4kom7o" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/安全/">安全</a></li></ul>
@@ -110,9 +165,9 @@
 
 
   
-    <article id="post-linux" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-linux-cron" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/05/17/linux/" class="article-date">
+    <a href="/2017/05/17/linux-cron/" class="article-date">
   <time datetime="2017-05-17T06:03:55.733Z" itemprop="datePublished">2017-05-17</time>
 </a>
     
@@ -128,7 +183,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/17/linux/">Linux定时任务</a>
+      <a class="article-title" href="/2017/05/17/linux-cron/">Linux定时任务</a>
     </h1>
   
 
@@ -149,7 +204,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/17/linux/" data-id="cj2sowkbd0001ycj5zxtdxr8h" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/17/linux-cron/" data-id="cj2su88u2000fc8j5zfrzh6sr" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/定时器/">定时器</a></li></ul>
@@ -168,7 +223,7 @@
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Server/">Server</a>
+    <a class="article-category-link" href="/categories/Mysql/">Mysql</a>
   </div>
 
   </div>
@@ -187,17 +242,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>========</p>
-<h2 id="nginx"><a href="#nginx" class="headerlink" title="nginx"></a>nginx</h2><p>最近因为工作需要（被逼迫着）鼓捣了一段时间的服务器。。。简直被折磨得体无完肤，so 做个总结，防止自己以后再入坑~~啦啦啦啦</p>
-<p>####安装<br>安装是不是就不用说了，直接从官网上面下载下来对应的包就可以了</p>
+        <p>nginx</p>
+<hr>
+<p>最近因为工作需要（被逼迫着）鼓捣了一段时间的服务器。。。简直被折磨得体无完肤，so 做个总结，防止自己以后再入坑~~啦啦啦啦</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>安装是不是就不用说了，直接从官网上面下载下来对应的包就可以了</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/04/21/service/" data-id="cj2sowkbh0002ycj5i3942t3z" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/04/21/service/" data-id="cj2su88ty000ec8j5cbcweroh" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/服务器/">服务器</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/安全/">安全</a></li></ul>
 
     </footer>
   </div>
@@ -241,7 +297,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/17/hello-world/" data-id="cj2sowkb40000ycj5bo5u4dek" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/02/17/hello-world/" data-id="cj2su88u7000hc8j5gal3acfw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -260,7 +316,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mysql/">Mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Server/">Server</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mysql/">Mysql</a></li></ul>
     </div>
   </div>
 
@@ -270,7 +326,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/安全/">安全</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/定时器/">定时器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务器/">服务器</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/commend/">commend</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/安全/">安全</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/定时器/">定时器</a></li></ul>
     </div>
   </div>
 
@@ -280,7 +336,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/安全/" style="font-size: 10px;">安全</a> <a href="/tags/定时器/" style="font-size: 10px;">定时器</a> <a href="/tags/服务器/" style="font-size: 10px;">服务器</a>
+      <a href="/tags/commend/" style="font-size: 10px;">commend</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/mysql/" style="font-size: 20px;">mysql</a> <a href="/tags/安全/" style="font-size: 20px;">安全</a> <a href="/tags/定时器/" style="font-size: 10px;">定时器</a>
     </div>
   </div>
 
@@ -302,11 +358,15 @@
       <ul>
         
           <li>
+            <a href="/2017/05/17/linux-common/">Linux命令</a>
+          </li>
+        
+          <li>
             <a href="/2017/05/17/mysql/">mysql 相关</a>
           </li>
         
           <li>
-            <a href="/2017/05/17/linux/">Linux定时任务</a>
+            <a href="/2017/05/17/linux-cron/">Linux定时任务</a>
           </li>
         
           <li>

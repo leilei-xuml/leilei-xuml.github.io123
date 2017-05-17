@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Linux定时任务 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="本人小虾米，为了某天实现某天成为大神的美好憧憬，开始记录积累~~记录一些散乱的知识点，方便自己时长查看。
+使用场景在工作中需要在特定时间执行自动备份所以需要建立一个定时任务．我选择在Linux下使用Crontab来添加定时任务执行shell文件．shell文件有数据库备份命令．
+一.  Crontab 介绍crontab命令的功能是在一定的时间间隔调度一些命令的执行。
+二.使用说明使用命令 cro">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux定时任务">
+<meta property="og:url" content="http://yoursite.com/2017/05/17/linux-cron/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="本人小虾米，为了某天实现某天成为大神的美好憧憬，开始记录积累~~记录一些散乱的知识点，方便自己时长查看。
+使用场景在工作中需要在特定时间执行自动备份所以需要建立一个定时任务．我选择在Linux下使用Crontab来添加定时任务执行shell文件．shell文件有数据库备份命令．
+一.  Crontab 介绍crontab命令的功能是在一定的时间间隔调度一些命令的执行。
+二.使用说明使用命令 cro">
+<meta property="og:updated_time" content="2017-05-17T08:00:21.110Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux定时任务">
+<meta name="twitter:description" content="本人小虾米，为了某天实现某天成为大神的美好憧憬，开始记录积累~~记录一些散乱的知识点，方便自己时长查看。
+使用场景在工作中需要在特定时间执行自动备份所以需要建立一个定时任务．我选择在Linux下使用Crontab来添加定时任务执行shell文件．shell文件有数据库备份命令．
+一.  Crontab 介绍crontab命令的功能是在一定的时间间隔调度一些命令的执行。
+二.使用说明使用命令 cro">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-linux-cron" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/17/linux-cron/" class="article-date">
+  <time datetime="2017-05-17T06:03:55.733Z" itemprop="datePublished">2017-05-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Linux定时任务
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本人小虾米，为了某天实现某天成为大神的美好憧憬，开始记录积累~~记录一些散乱的知识点，方便自己时长查看。</p>
+<h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><p>在工作中需要在特定时间执行自动备份所以需要建立一个定时任务．我选择在Linux下使用Crontab来添加定时任务执行shell文件．shell文件有数据库备份命令．</p>
+<h4 id="一-Crontab-介绍"><a href="#一-Crontab-介绍" class="headerlink" title="一.  Crontab 介绍"></a>一.  Crontab 介绍</h4><p>crontab命令的功能是在一定的时间间隔调度一些命令的执行。</p>
+<h4 id="二-使用说明"><a href="#二-使用说明" class="headerlink" title="二.使用说明"></a>二.使用说明</h4><p>使用命令 crontab -e 然后直接编辑定时脚本。<br>这样执行以后，属于用户自定义的，会被写到 /var/spool/cron 目录下，生成一个和用户名一致的文件，文件内容就是我们编辑的定时脚本<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">crontab <span class="_">-e</span></div></pre></td></tr></table></figure></p>
+<p>下面是一个示例说明：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">*/1 * * * * /usr/bin/php  /data/script/mayi-shixian-builder/index.php builder run</div><div class="line">每分钟执行一次      PHP位置              执行的文件位置，后面是控制器和方法</div><div class="line">分钟 小时 几号 月份 星期几</div></pre></td></tr></table></figure></p>
+<p>minute hour day month dayofweek command<br>minute - 从0到59的整数<br>    hour - 从0到23的整数<br>    day - 从1到31的整数 (必须是指定月份的有效日期)<br>    month - 从1到12的整数 (或如Jan或Feb简写的月份)<br>    dayofweek - 从0到7的整数，0或7用来描述周日 (或用Sun或Mon简写来表示)<br>    command - 需要执行的命令(可用as ls /proc &gt;&gt; /tmp/proc或 执行自定义脚本的命令)<br>    root表示以root用户身份来运行<br>    run-parts表示后面跟着的是一个文件夹，要执行的是该文件夹下的所有脚本<br>    对于以上各语句，星号(<em>)表示所有可用的值。例如</em>在指代month时表示每月执行(需要符合其他限制条件)该命令。<br>    整数间的连字号(-)表示整数列，例如1-4意思是整数1,2,3,4<br>指定数值由逗号分开。如：3,4,6,8表示这四个指定整数。<br>符号“/”指定步进设置。“/<interger>”表示步进值。如0-59/2定义每两分钟执行一次。步进值也可用星号表示。如*/3用来运行每三个月份运行指定任务。<br>以“#”开头的为注释行,不会被执行。</interger></p>
+<p>启动定时任务：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service cron start</div></pre></td></tr></table></figure></p>
+<p>查看定时任务状态:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service cron status</div></pre></td></tr></table></figure></p>
+<p>查看定时任务列表:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service cron <span class="_">-l</span></div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/05/17/linux-cron/" data-id="cj2su88u2000fc8j5zfrzh6sr" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/定时器/">定时器</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/05/17/mysql/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          mysql 相关
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/04/21/service/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">服务器</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mysql/">Mysql</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/commend/">commend</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/安全/">安全</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/定时器/">定时器</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/commend/" style="font-size: 10px;">commend</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/mysql/" style="font-size: 20px;">mysql</a> <a href="/tags/安全/" style="font-size: 20px;">安全</a> <a href="/tags/定时器/" style="font-size: 10px;">定时器</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/05/17/linux-common/">Linux命令</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/17/mysql/">mysql 相关</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/17/linux-cron/">Linux定时任务</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/21/service/">服务器</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/17/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

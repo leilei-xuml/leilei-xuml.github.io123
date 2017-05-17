@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Linux命令 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="[TOC]
+查看日志tail12tailf test.logtail -f test.log
+cat、tail、head 结合显示一个文件中的某几行(中间几行)
+从第3000行开始，显示1000行。即显示3000~3999行1cat fillname | tail -n +3000 | head -n 1000
+显示1000行到3000行12cat filename | tail -n +1000">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux命令">
+<meta property="og:url" content="http://yoursite.com/2017/05/17/linux-common/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="[TOC]
+查看日志tail12tailf test.logtail -f test.log
+cat、tail、head 结合显示一个文件中的某几行(中间几行)
+从第3000行开始，显示1000行。即显示3000~3999行1cat fillname | tail -n +3000 | head -n 1000
+显示1000行到3000行12cat filename | tail -n +1000">
+<meta property="og:updated_time" content="2017-05-17T10:20:51.685Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux命令">
+<meta name="twitter:description" content="[TOC]
+查看日志tail12tailf test.logtail -f test.log
+cat、tail、head 结合显示一个文件中的某几行(中间几行)
+从第3000行开始，显示1000行。即显示3000~3999行1cat fillname | tail -n +3000 | head -n 1000
+显示1000行到3000行12cat filename | tail -n +1000">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-linux-common" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/17/linux-common/" class="article-date">
+  <time datetime="2017-05-17T09:20:05.024Z" itemprop="datePublished">2017-05-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Linux命令
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>[TOC]</p>
+<h3 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h3><h4 id="tail"><a href="#tail" class="headerlink" title="tail"></a>tail</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">tailf test.log</div><div class="line">tail -f test.log</div></pre></td></tr></table></figure>
+<h4 id="cat、tail、head-结合"><a href="#cat、tail、head-结合" class="headerlink" title="cat、tail、head 结合"></a>cat、tail、head 结合</h4><p>显示一个文件中的某几行(中间几行)</p>
+<p>从第3000行开始，显示1000行。即显示3000~3999行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat fillname | tail -n +3000 | head -n 1000</div></pre></td></tr></table></figure></p>
+<p>显示1000行到3000行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cat filename | tail -n +1000|head -n 2000</div><div class="line">cat filename | head -n 3000 | tail -n +1000</div></pre></td></tr></table></figure></p>
+<p>*注意两种方法的顺序<br>分解<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">tailf -n 1000  显示最后1000行</div><div class="line">tailf -n +1000 从1000行开始显示，显示1000行之后的</div><div class="line">head -n 1000 显示前面1000行</div></pre></td></tr></table></figure></p>
+<h6 id="cat-功能简介："><a href="#cat-功能简介：" class="headerlink" title="cat 功能简介："></a>cat 功能简介：</h6><p>1.一次显示整个文件。$ cat filename<br>2.从键盘创建一个文件。$ cat &gt; filename<br>只能创建新文件,不能编辑已有文件.<br>3.将几个文件合并为一个文件： $cat file1 file2 &gt; file<br>参数：<br>-n 或 –number 由 1 开始对所有输出的行数编号<br>-b 或 –number-nonblank 和 -n 相似，只不过对于空白行不编号<br>-s 或 –squeeze-blank 当遇到有连续两行以上的空白行，就代换为一行的空白行<br>-v 或 –show-nonprinting</p>
+<p>示例：<br>把 textfile1 的档案内容加上行号后输入 textfile2 这个档案里<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat -n textfile1 &gt; textfile2</div></pre></td></tr></table></figure></p>
+<p>把 textfile1 和 textfile2 的档案内容加上行号（空白行不加）之后将内容附加到 textfile3 里。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat -b textfile1 textfile2 &gt;&gt; textfile3</div></pre></td></tr></table></figure></p>
+<p>把test.txt文件扔进垃圾箱，赋空值test.txt<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /dev/null &gt; /etc/test.txt</div></pre></td></tr></table></figure></p>
+<p>注意：&gt;意思是创建，&gt;&gt;是追加。千万不要弄混了。</p>
+<h4 id="sed"><a href="#sed" class="headerlink" title="sed"></a>sed</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed -n &apos;5,10p&apos; filename</div></pre></td></tr></table></figure>
+<h4 id="tac"><a href="#tac" class="headerlink" title="tac"></a>tac</h4><p>tac 是将 cat 反写过来，所以他的功能就跟 cat 相反， cat 是由第一行到最后一行连续显示在萤幕上，<br>而 tac 则是由最后一行到第一行反向在萤幕上显示出来！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/05/17/linux-common/" data-id="cj2su88sq0000c8j5x8sz8h00" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/commend/">commend</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/05/17/mysql/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">mysql 相关</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mysql/">Mysql</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/commend/">commend</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/安全/">安全</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/定时器/">定时器</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/commend/" style="font-size: 10px;">commend</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/mysql/" style="font-size: 20px;">mysql</a> <a href="/tags/安全/" style="font-size: 20px;">安全</a> <a href="/tags/定时器/" style="font-size: 10px;">定时器</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/05/17/linux-common/">Linux命令</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/17/mysql/">mysql 相关</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/17/linux-cron/">Linux定时任务</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/21/service/">服务器</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/17/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
