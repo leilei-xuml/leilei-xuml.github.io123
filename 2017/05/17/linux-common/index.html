@@ -19,7 +19,7 @@ cat、tail、head 结合显示一个文件中的某几行(中间几行)
 cat、tail、head 结合显示一个文件中的某几行(中间几行)
 从第3000行开始，显示1000行。即显示3000~3999行1cat fillname | tail -n +3000 | head -n 1000
 显示1000行到3000行12cat filename | tail -n +1000">
-<meta property="og:updated_time" content="2017-05-17T10:20:51.685Z">
+<meta property="og:updated_time" content="2017-05-17T10:49:29.577Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux命令">
 <meta name="twitter:description" content="[TOC]
@@ -113,8 +113,12 @@ cat、tail、head 结合显示一个文件中的某几行(中间几行)
 <p>把test.txt文件扔进垃圾箱，赋空值test.txt<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /dev/null &gt; /etc/test.txt</div></pre></td></tr></table></figure></p>
 <p>注意：&gt;意思是创建，&gt;&gt;是追加。千万不要弄混了。</p>
 <h4 id="sed"><a href="#sed" class="headerlink" title="sed"></a>sed</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed -n &apos;5,10p&apos; filename</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed -n &apos;/^2011-08-23.*ERROR/p&apos; demolog.log</div></pre></td></tr></table></figure>
 <h4 id="tac"><a href="#tac" class="headerlink" title="tac"></a>tac</h4><p>tac 是将 cat 反写过来，所以他的功能就跟 cat 相反， cat 是由第一行到最后一行连续显示在萤幕上，<br>而 tac 则是由最后一行到第一行反向在萤幕上显示出来！</p>
-
+<h4 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">grep error log-2017-03-09.php</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">grep -o &apos;order-fix.curr_id:[0−9]\+&apos; demo.log    #-o选项只提取order-fix.curr_id:xxx的内容（而不是一整行），并输出到屏幕上</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">grep -c &apos;ERROR&apos; demo.log   #输出文件demo.log中查找所有包行ERROR的行的数量</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">grep -v &apos;ERROR&apos; demo.log   #查找不含&quot;ERROR&quot;的行</div></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
