@@ -5,19 +5,19 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="服务器相关nginx最近因为工作需要（被逼迫着）鼓捣了一段时间的服务器。。。简直被折磨得体无完肤，so 做个总结，防止自己以后再入坑~~啦啦啦啦
-####安装安装是不是就不用说了，直接从官网上面下载下来对应的包就可以了">
+  <meta name="description" content="mysql 相关本文记录一些mysql的一些小的知识点。
+###sql注入所谓SQL注入，就是通过把SQL命令插入到Web表单提交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令。具体来说，它是利用现有应用程序，将（恶意的）SQL命令注入到后台数据库引擎执行的能力，它可以通过在Web表单中输入（恶意）SQL语句得到一个存在安全漏洞的网站上的数据库，而不是按照设计者意图去执">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/2017/04/21/service/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/05/17/mysql/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="服务器相关nginx最近因为工作需要（被逼迫着）鼓捣了一段时间的服务器。。。简直被折磨得体无完肤，so 做个总结，防止自己以后再入坑~~啦啦啦啦
-####安装安装是不是就不用说了，直接从官网上面下载下来对应的包就可以了">
-<meta property="og:updated_time" content="2017-04-21T03:30:31.300Z">
+<meta property="og:description" content="mysql 相关本文记录一些mysql的一些小的知识点。
+###sql注入所谓SQL注入，就是通过把SQL命令插入到Web表单提交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令。具体来说，它是利用现有应用程序，将（恶意的）SQL命令注入到后台数据库引擎执行的能力，它可以通过在Web表单中输入（恶意）SQL语句得到一个存在安全漏洞的网站上的数据库，而不是按照设计者意图去执">
+<meta property="og:updated_time" content="2017-05-17T07:03:51.156Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="服务器相关nginx最近因为工作需要（被逼迫着）鼓捣了一段时间的服务器。。。简直被折磨得体无完肤，so 做个总结，防止自己以后再入坑~~啦啦啦啦
-####安装安装是不是就不用说了，直接从官网上面下载下来对应的包就可以了">
+<meta name="twitter:description" content="mysql 相关本文记录一些mysql的一些小的知识点。
+###sql注入所谓SQL注入，就是通过把SQL命令插入到Web表单提交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令。具体来说，它是利用现有应用程序，将（恶意的）SQL命令注入到后台数据库引擎执行的能力，它可以通过在Web表单中输入（恶意）SQL语句得到一个存在安全漏洞的网站上的数据库，而不是按照设计者意图去执">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -66,10 +66,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-service" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-mysql" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/04/21/service/" class="article-date">
-  <time datetime="2017-04-21T03:37:01.447Z" itemprop="datePublished">2017-04-21</time>
+    <a href="/2017/05/17/mysql/" class="article-date">
+  <time datetime="2017-05-17T06:51:10.513Z" itemprop="datePublished">2017-05-17</time>
 </a>
     
   </div>
@@ -78,13 +78,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="服务器相关"><a href="#服务器相关" class="headerlink" title="服务器相关"></a>服务器相关</h1><h2 id="nginx"><a href="#nginx" class="headerlink" title="nginx"></a>nginx</h2><p>最近因为工作需要（被逼迫着）鼓捣了一段时间的服务器。。。简直被折磨得体无完肤，so 做个总结，防止自己以后再入坑~~啦啦啦啦</p>
-<p>####安装<br>安装是不是就不用说了，直接从官网上面下载下来对应的包就可以了</p>
+        <hr>
+<h2 id="mysql-相关"><a href="#mysql-相关" class="headerlink" title="mysql 相关"></a>mysql 相关</h2><p>本文记录一些mysql的一些小的知识点。</p>
+<p>###sql注入<br>所谓SQL注入，就是通过把SQL命令插入到Web表单提交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令。具体来说，它是利用现有应用程序，将（恶意的）SQL命令注入到后台数据库引擎执行的能力，它可以通过在Web表单中输入（恶意）SQL语句得到一个存在安全漏洞的网站上的数据库，而不是按照设计者意图去执行SQL语句。[1]  比如先前的很多影视网站泄露VIP会员密码大多就是通过WEB表单递交查询字符暴出的，这类表单特别容易受到SQL注入式攻击。</p>
+<h5 id="下面是一些示例"><a href="#下面是一些示例" class="headerlink" title="下面是一些示例"></a>下面是一些示例</h5><ol>
+<li>后台身份验证绕过漏洞</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SELECT * FROM zb_user WHERE email=<span class="string">''</span> or 1=1<span class="comment">#' AND `password`=12344555</span></div></pre></td></tr></table></figure>
+<p>利用单引号和双引号以及注释字数or等条件在构造where条件</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/04/21/service/" data-id="cj2skuywa0000r0j5jcb6wgbh" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/05/17/mysql/" data-id="cj2sn6ni00000xgj52ecmsvk0" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -93,19 +99,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/05/17/linux/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Récent</strong>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/02/17/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/05/17/linux/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Ancien</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title"></div>
     </a>
   
 </nav>
