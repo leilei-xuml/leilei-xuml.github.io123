@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title>mysql 相关 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="mysql 相关本文记录一些mysql的一些小的知识点。
-###sql注入所谓SQL注入，就是通过把SQL命令插入到Web表单提交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令。具体来说，它是利用现有应用程序，将（恶意的）SQL命令注入到后台数据库引擎执行的能力，它可以通过在Web表单中输入（恶意）SQL语句得到一个存在安全漏洞的网站上的数据库，而不是按照设计者意图去执">
+  <meta name="description" content="本文记录一些mysql的一些小的知识点。
+###sql注入所谓SQL注入，就是通过把SQL命令插入到Web表单提交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令。具体来说，它是利用现有应用程序，将（恶意的）SQL命令注入到后台数据库引擎执行的能力，它可以通过在Web表单中输入（恶意）SQL语句得到一个存在安全漏洞的网站上的数据库，而不是按照设计者意图去执行SQL语句。[1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="mysql 相关">
 <meta property="og:url" content="http://yoursite.com/2017/05/17/mysql/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="mysql 相关本文记录一些mysql的一些小的知识点。
-###sql注入所谓SQL注入，就是通过把SQL命令插入到Web表单提交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令。具体来说，它是利用现有应用程序，将（恶意的）SQL命令注入到后台数据库引擎执行的能力，它可以通过在Web表单中输入（恶意）SQL语句得到一个存在安全漏洞的网站上的数据库，而不是按照设计者意图去执">
-<meta property="og:updated_time" content="2017-05-17T07:03:51.156Z">
+<meta property="og:description" content="本文记录一些mysql的一些小的知识点。
+###sql注入所谓SQL注入，就是通过把SQL命令插入到Web表单提交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令。具体来说，它是利用现有应用程序，将（恶意的）SQL命令注入到后台数据库引擎执行的能力，它可以通过在Web表单中输入（恶意）SQL语句得到一个存在安全漏洞的网站上的数据库，而不是按照设计者意图去执行SQL语句。[1">
+<meta property="og:updated_time" content="2017-05-17T07:19:39.029Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="mysql 相关本文记录一些mysql的一些小的知识点。
-###sql注入所谓SQL注入，就是通过把SQL命令插入到Web表单提交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令。具体来说，它是利用现有应用程序，将（恶意的）SQL命令注入到后台数据库引擎执行的能力，它可以通过在Web表单中输入（恶意）SQL语句得到一个存在安全漏洞的网站上的数据库，而不是按照设计者意图去执">
+<meta name="twitter:title" content="mysql 相关">
+<meta name="twitter:description" content="本文记录一些mysql的一些小的知识点。
+###sql注入所谓SQL注入，就是通过把SQL命令插入到Web表单提交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令。具体来说，它是利用现有应用程序，将（恶意的）SQL命令注入到后台数据库引擎执行的能力，它可以通过在Web表单中输入（恶意）SQL语句得到一个存在安全漏洞的网站上的数据库，而不是按照设计者意图去执行SQL语句。[1">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -76,10 +76,19 @@
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      mysql 相关
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<h2 id="mysql-相关"><a href="#mysql-相关" class="headerlink" title="mysql 相关"></a>mysql 相关</h2><p>本文记录一些mysql的一些小的知识点。</p>
+        <p>本文记录一些mysql的一些小的知识点。</p>
 <p>###sql注入<br>所谓SQL注入，就是通过把SQL命令插入到Web表单提交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令。具体来说，它是利用现有应用程序，将（恶意的）SQL命令注入到后台数据库引擎执行的能力，它可以通过在Web表单中输入（恶意）SQL语句得到一个存在安全漏洞的网站上的数据库，而不是按照设计者意图去执行SQL语句。[1]  比如先前的很多影视网站泄露VIP会员密码大多就是通过WEB表单递交查询字符暴出的，这类表单特别容易受到SQL注入式攻击。</p>
 <h5 id="下面是一些示例"><a href="#下面是一些示例" class="headerlink" title="下面是一些示例"></a>下面是一些示例</h5><ol>
 <li>后台身份验证绕过漏洞</li>
@@ -90,7 +99,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/17/mysql/" data-id="cj2sn6ni00000xgj52ecmsvk0" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/05/17/mysql/" data-id="cj2snkd130001zoj5xrtiyloe" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -102,7 +111,7 @@
   
     <a href="/2017/05/17/linux/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Ancien</strong>
-      <div class="article-nav-title"></div>
+      <div class="article-nav-title">Linux定时任务</div>
     </a>
   
 </nav>
@@ -139,15 +148,15 @@
       <ul>
         
           <li>
-            <a href="/2017/05/17/mysql/">(no title)</a>
+            <a href="/2017/05/17/mysql/">mysql 相关</a>
           </li>
         
           <li>
-            <a href="/2017/05/17/linux/">(no title)</a>
+            <a href="/2017/05/17/linux/">Linux定时任务</a>
           </li>
         
           <li>
-            <a href="/2017/04/21/service/">(no title)</a>
+            <a href="/2017/04/21/service/">服务器</a>
           </li>
         
           <li>
