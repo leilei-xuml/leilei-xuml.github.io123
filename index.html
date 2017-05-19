@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -60,6 +60,55 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-mysql-base" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/19/mysql-base/" class="article-date">
+  <time datetime="2017-05-19T07:08:50.000Z" itemprop="datePublished">2017-05-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Mysql/">Mysql</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/19/mysql-base/">mysql-base</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="mysql存储引擎的比较"><a href="#mysql存储引擎的比较" class="headerlink" title="mysql存储引擎的比较"></a>mysql存储引擎的比较</h3><h4 id="Innodb-存储引擎"><a href="#Innodb-存储引擎" class="headerlink" title="Innodb 存储引擎"></a>Innodb 存储引擎</h4><p>Innodb 是Mysql的默认事务型引擎，它被设计用来处理大量的短期事务，短期事务大多数情况是正常提交的，很少被回滚。<br>Innodb 的性能和自动崩溃恢复特性，使得它在非事务型存储的需求中也很有用处<br>Innodb 的输出存储在表空间中，表空间是由Innodb管理的一个黑盒子，由一系列的数据文件组成。<br>Innodb 采用MVCC来支持高并发，并且实现了四个标准的隔离级别<br>Innodb适合以下场景使用:<br>1.更新密集的表。Innodb存储引擎特别适合处理多重并发的更新请求。<br>2.事务。INnodb存储引擎是支持事务的标准的Mysql存储引擎。<br>3.自动灾难恢复。Innodb表能够自动从灾难中恢复。<br>4.外键约束。Mysql支持外键的存储引擎只有Innodb。<br>5.支持自动增加列AUTO_INCREMENT属性。</p>
+<h4 id="MyISAM"><a href="#MyISAM" class="headerlink" title="MyISAM"></a>MyISAM</h4><p>MyISAM 提供了大量的特性，包括全文索引，压缩，空间函数，但是不支持事务。崩溃后无法修复。<br>.frm 文件，存储表定义；<br>.MYD 文件，存储数据；<br>.MYI 文件，存储索引。<br>MyISAM 适合以下情景使用：</p>
+<ol>
+<li>选择密集型的表。MyISAM存储引擎在筛选大量数据时非常迅速。</li>
+<li>插入密集型的表。MyISAM的并发插入特性允许同时选择和插入数据。</li>
+</ol>
+<h4 id="MEMORY"><a href="#MEMORY" class="headerlink" title="MEMORY"></a>MEMORY</h4><p>使用Memory存储引擎的出发点是速度，因为它采用的逻辑存储介质是系统内存。<br>一般在以下情况下考虑使用Memory<br>1.目标数据较小，而且会被非常频繁的访问。在内存中存放数据，所以会造成内存的使用，可以通过参数max_meap_table_size控制Memory表的大小，设置此参数，就可以限制Memory表的最大大小。<br>2.数据是临时的，并且要求必须立即可用。<br>3.存储在Memory表中的数据如果突然丢失，不会对应用服务产生实质的负面影响。</p>
+<h5 id="其他的暂时不在这边赘述了"><a href="#其他的暂时不在这边赘述了" class="headerlink" title="其他的暂时不在这边赘述了"></a>其他的暂时不在这边赘述了</h5>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/05/19/mysql-base/" data-id="cj2vjyhek00077oj5h7uzbr34" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/存储引擎/">存储引擎</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-linux-common" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -108,7 +157,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/17/linux-common/" data-id="cj2su88sq0000c8j5x8sz8h00" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/17/linux-common/" data-id="cj2vjyhe300027oj5ysok8fyl" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/commend/">commend</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
@@ -157,7 +206,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/17/mysql/" data-id="cj2su88sx0001c8j53h4kom7o" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/17/mysql/" data-id="cj2vjyhed00057oj56dbrwkxd" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/安全/">安全</a></li></ul>
@@ -208,7 +257,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/17/linux-cron/" data-id="cj2su88u2000fc8j5zfrzh6sr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/17/linux-cron/" data-id="cj2vjyhdz00017oj5q3c6yvxn" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/定时器/">定时器</a></li></ul>
@@ -254,7 +303,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/04/21/service/" data-id="cj2su88ty000ec8j5cbcweroh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/04/21/service/" data-id="cj2vjyheh00067oj5lmhxl17v" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/安全/">安全</a></li></ul>
@@ -301,7 +350,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/17/hello-world/" data-id="cj2su88u7000hc8j5gal3acfw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/02/17/hello-world/" data-id="cj2vjyhdr00007oj5j58hhwwo" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -318,7 +367,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Catégories</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mysql/">Mysql</a></li></ul>
     </div>
@@ -328,9 +377,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/commend/">commend</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/安全/">安全</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/定时器/">定时器</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/commend/">commend</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/存储引擎/">存储引擎</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/安全/">安全</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/定时器/">定时器</a></li></ul>
     </div>
   </div>
 
@@ -338,9 +387,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
-      <a href="/tags/commend/" style="font-size: 10px;">commend</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/mysql/" style="font-size: 20px;">mysql</a> <a href="/tags/安全/" style="font-size: 20px;">安全</a> <a href="/tags/定时器/" style="font-size: 10px;">定时器</a>
+      <a href="/tags/commend/" style="font-size: 10px;">commend</a> <a href="/tags/linux/" style="font-size: 15px;">linux</a> <a href="/tags/mysql/" style="font-size: 20px;">mysql</a> <a href="/tags/存储引擎/" style="font-size: 10px;">存储引擎</a> <a href="/tags/安全/" style="font-size: 15px;">安全</a> <a href="/tags/定时器/" style="font-size: 10px;">定时器</a>
     </div>
   </div>
 
@@ -357,9 +406,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/05/19/mysql-base/">mysql-base</a>
+          </li>
         
           <li>
             <a href="/2017/05/17/linux-common/">Linux命令</a>
@@ -377,10 +430,6 @@
             <a href="/2017/04/21/service/">服务器</a>
           </li>
         
-          <li>
-            <a href="/2017/02/17/hello-world/">Hello World</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -394,7 +443,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
