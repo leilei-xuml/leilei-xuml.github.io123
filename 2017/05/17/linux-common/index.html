@@ -19,7 +19,7 @@ cat、tail、head 结合显示一个文件中的某几行(中间几行)
 cat、tail、head 结合显示一个文件中的某几行(中间几行)
 从第3000行开始，显示1000行。即显示3000~3999行1cat fillname | tail -n +3000 | head -n 1000
 显示1000行到3000行12cat filename | tail -n +1000">
-<meta property="og:updated_time" content="2017-05-17T10:49:29.577Z">
+<meta property="og:updated_time" content="2017-05-19T09:18:55.118Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux命令">
 <meta name="twitter:description" content="[TOC]
@@ -119,6 +119,19 @@ cat、tail、head 结合显示一个文件中的某几行(中间几行)
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">grep -o &apos;order-fix.curr_id:[0−9]\+&apos; demo.log    #-o选项只提取order-fix.curr_id:xxx的内容（而不是一整行），并输出到屏幕上</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">grep -c &apos;ERROR&apos; demo.log   #输出文件demo.log中查找所有包行ERROR的行的数量</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">grep -v &apos;ERROR&apos; demo.log   #查找不含&quot;ERROR&quot;的行</div></pre></td></tr></table></figure>
+<h3 id="查看系统空间"><a href="#查看系统空间" class="headerlink" title="查看系统空间"></a>查看系统空间</h3><h4 id="查看内存空间"><a href="#查看内存空间" class="headerlink" title="查看内存空间"></a>查看内存空间</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">top</div></pre></td></tr></table></figure>
+<p>N - 以 PID 的大小的顺序排列表示进程列表（第三部分后述）</p>
+<p>　　P - 以 CPU 占用率大小的顺序排列进程列表 （第三部分后述）</p>
+<p>　　M - 以内存占用率大小的顺序排列进程列表 （第三部分后述）</p>
+<p>　　h - 显示帮助</p>
+<p>　　n - 设置在进程列表所显示进程的数量</p>
+<p>　　q - 退出 top</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ pmap -d PID</div></pre></td></tr></table></figure>
+<p>在Linux下查看内存我们一般用free命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">free</div></pre></td></tr></table></figure></p>
+<p>Linux 下 取进程占用 cpu 最高的前10个进程<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ps aux|head -1;ps aux|grep -v PID|sort -rn -k +3|head</div></pre></td></tr></table></figure></p>
+<p> linux 下 取进程占用内存(MEM)最高的前10个进程<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ps aux|head -1;ps aux|grep -v PID|sort -rn -k +4|head</div></pre></td></tr></table></figure></p>
+<h4 id="查看磁盘空间"><a href="#查看磁盘空间" class="headerlink" title="查看磁盘空间"></a>查看磁盘空间</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo df -h</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo du -ah --max-depth=1</div></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
