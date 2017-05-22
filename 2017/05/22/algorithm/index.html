@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>algorithm | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一些常识性的算法练习还是必要的，虽说目前项目中还没有用用到的，但是感觉先马下来终归是有好处滴~
+排序冒泡排序这个是不是经常闻其大名~~思路分析：在要排序的一组数中，对当前还未排好的序列，从前往后对相邻的两个数依次进行比较和调整，让较大的数往下沉，较小的往上冒。即，每当两相邻的数比较后发现它们的排序与排序要求相反时，就将它们互换。1234567891011121314$arr=array(1,43,">
+<meta property="og:type" content="article">
+<meta property="og:title" content="algorithm">
+<meta property="og:url" content="http://yoursite.com/2017/05/22/algorithm/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一些常识性的算法练习还是必要的，虽说目前项目中还没有用用到的，但是感觉先马下来终归是有好处滴~
+排序冒泡排序这个是不是经常闻其大名~~思路分析：在要排序的一组数中，对当前还未排好的序列，从前往后对相邻的两个数依次进行比较和调整，让较大的数往下沉，较小的往上冒。即，每当两相邻的数比较后发现它们的排序与排序要求相反时，就将它们互换。1234567891011121314$arr=array(1,43,">
+<meta property="og:updated_time" content="2017-05-22T08:15:16.524Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="algorithm">
+<meta name="twitter:description" content="一些常识性的算法练习还是必要的，虽说目前项目中还没有用用到的，但是感觉先马下来终归是有好处滴~
+排序冒泡排序这个是不是经常闻其大名~~思路分析：在要排序的一组数中，对当前还未排好的序列，从前往后对相邻的两个数依次进行比较和调整，让较大的数往下沉，较小的往上冒。即，每当两相邻的数比较后发现它们的排序与排序要求相反时，就将它们互换。1234567891011121314$arr=array(1,43,">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-algorithm" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/22/algorithm/" class="article-date">
+  <time datetime="2017-05-22T07:09:22.000Z" itemprop="datePublished">2017-05-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/算法/">算法</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      algorithm
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一些常识性的算法练习还是必要的，虽说目前项目中还没有用用到的，但是感觉先马下来终归是有好处滴~</p>
+<h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><h4 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h4><p>这个是不是经常闻其大名~~<br>思路分析：在要排序的一组数中，对当前还未排好的序列，从前往后对相邻的两个数依次进行比较和调整，让较大的数往下沉，较小的往上冒。即，每当两相邻的数比较后发现它们的排序与排序要求相反时，就将它们互换。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">$arr=array(1,43,54,62,21,66,32,78,36,76,39); </div><div class="line">function bubbleSort($arr)&#123;</div><div class="line">	$count = count($arr);</div><div class="line">    for($i=1;$i&lt;$count;$i++)&#123;</div><div class="line">    	for($j=0;$j&lt;$count-$i;$j++)&#123;</div><div class="line">        	if($arr[$j] &gt; $arr[$j+1])&#123;</div><div class="line">            	$temp = $arr[$j];</div><div class="line">                $arr[$j] = $arr[$j+1];</div><div class="line">                $arr[$j+1] = $temp</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return $arr;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h4><p>思路分析：在要排序的一组数中，选出最小的一个数与第一个位置的数交换。然后在剩下的数当中再找最小的与第二个位置的数交换，如此循环到倒数第二个数和最后一个数比较为止。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">function selectSort($arr)&#123;</div><div class="line">	$count = count($arr);</div><div class="line">    for($i=0;$i&lt;$count-1;$i++)&#123;</div><div class="line">    	$p = $i;</div><div class="line">        for($j=$i+1;$j&lt;$count;$j++)&#123;</div><div class="line">        	if($arr[$j]&lt;$arr[$p])&#123;</div><div class="line">            	$p = $j;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        if($p!=$i)&#123;</div><div class="line">        	$tem = $arr[$p];</div><div class="line">            $arr[$p] = $arr[$i];</div><div class="line">            $arr[$i] = $tem;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return $arr;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h4><p>思路分析：在要排序的一组数中，假设前面的数已经是排好顺序的，现在要把第n个数插到前面的有序数中，使得这n个数也是排好顺序的。如此反复循环，直到全部排好顺序。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">function insertSort($arr)&#123;</div><div class="line">	$count = count($arr);</div><div class="line">	for($i=1;$i&lt;$count;$i++)&#123;</div><div class="line">    	$tmp = $arr[$i];</div><div class="line">    	for($j=$i-1;$j&gt;=0;$j--)&#123;</div><div class="line">        //发现插入的元素要小，交换位置，将后边的元素与前面的元素互换</div><div class="line">        	if($tmp &lt; $arr[$j])&#123;</div><div class="line">            	 $arr[$j+1] = $arr[$j];</div><div class="line">                 $arr[$j] = $tmp;</div><div class="line">            &#125;else&#123;</div><div class="line">            	break;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h4><p>思路分析：选择一个基准元素，通常选择第一个元素或者最后一个元素。通过一趟扫描，将待排序列分成两部分，一部分比基准元素小，一部分大于等于基准元素。此时基准元素在其排好序后的正确位置，然后再用同样的方法递归地排序划分的两部分。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">function quickSort($arr) &#123;</div><div class="line">	$count = count($arr);</div><div class="line">    if($count&lt;=1)&#123;</div><div class="line">    	return $arr;</div><div class="line">    &#125;</div><div class="line">    //选择第一个元素作为基准</div><div class="line">    $base_num = $arr[0];</div><div class="line">    //遍历除了标尺外的所有元素，按照大小关系放入两个数组内</div><div class="line">    //初始化两个数组</div><div class="line">    $left_array = array();  //小于基准的</div><div class="line">    $right_array = array();  //大于基准的</div><div class="line">    </div><div class="line">    for($i=1;$i&lt;$count;$i++)&#123;</div><div class="line">    	if($base_num &gt; $arr[$i])&#123;</div><div class="line">        	$left_array[] = $arr[$i];</div><div class="line">        &#125;else&#123;</div><div class="line">        	$right_array[] = $arr[$i];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    //再分别对左边和右边的数组进行相同的排序处理方式递归调用这个函数</div><div class="line">    $left_array = quick_sort($left_array);</div><div class="line">    $right_array = quick_sort($right_array);</div><div class="line">    //合并</div><div class="line">    return array_merge($left_array, array($base_num), $right_array);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h3><h4 id="二分法查找"><a href="#二分法查找" class="headerlink" title="二分法查找"></a>二分法查找</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">public function bin_search($arr,$val)&#123;</div><div class="line">	sort($arr);</div><div class="line">	$min = 0;</div><div class="line">  	$max = count($arr);</div><div class="line">    for($i=min;$i&lt;$max;$min++)&#123;</div><div class="line">    	$mid = ceil(($min + $max) / 2);</div><div class="line">        if($arr[$mid]==$val)&#123;</div><div class="line">        	  echo &apos;二分查找成功!&apos;;</div><div class="line">    		  exit(0);</div><div class="line">        &#125; else if($val &lt; $arr[$mid])&#123;</div><div class="line">        	$max = $mid;</div><div class="line">        &#125;else if($val&gt;$arr[$mid])&#123;</div><div class="line">        	$min = $mid;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    echo &apos;二分查找失败!&apos;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/05/22/algorithm/" data-id="cj2zux5az00006oj59s38cxgx" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/05/22/vim/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">vim 相关</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mysql/">Mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Server/">Server</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/vim/">vim</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/commend/">commend</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/server/">server</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/存储引擎/">存储引擎</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/安全/">安全</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/定时器/">定时器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务器/">服务器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法/">算法</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/commend/" style="font-size: 10px;">commend</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/mysql/" style="font-size: 20px;">mysql</a> <a href="/tags/server/" style="font-size: 10px;">server</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/存储引擎/" style="font-size: 10px;">存储引擎</a> <a href="/tags/安全/" style="font-size: 10px;">安全</a> <a href="/tags/定时器/" style="font-size: 10px;">定时器</a> <a href="/tags/服务器/" style="font-size: 10px;">服务器</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/05/22/algorithm/">algorithm</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/22/vim/">vim 相关</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/19/mysql-base/">mysql-base</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/17/linux-common/">Linux命令</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/17/mysql/">mysql 相关</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
