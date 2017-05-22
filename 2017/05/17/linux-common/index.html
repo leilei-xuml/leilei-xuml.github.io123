@@ -19,7 +19,7 @@ cat、tail、head 结合显示一个文件中的某几行(中间几行)
 cat、tail、head 结合显示一个文件中的某几行(中间几行)
 从第3000行开始，显示1000行。即显示3000~3999行1cat fillname | tail -n +3000 | head -n 1000
 显示1000行到3000行12cat filename | tail -n +1000">
-<meta property="og:updated_time" content="2017-05-19T09:18:55.118Z">
+<meta property="og:updated_time" content="2017-05-22T06:24:02.198Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux命令">
 <meta name="twitter:description" content="[TOC]
@@ -64,9 +64,9 @@ cat、tail、head 结合显示一个文件中的某几行(中间几行)
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -114,6 +114,7 @@ cat、tail、head 结合显示一个文件中的某几行(中间几行)
 <p>注意：&gt;意思是创建，&gt;&gt;是追加。千万不要弄混了。</p>
 <h4 id="sed"><a href="#sed" class="headerlink" title="sed"></a>sed</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed -n &apos;5,10p&apos; filename</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed -n &apos;/^2011-08-23.*ERROR/p&apos; demolog.log</div></pre></td></tr></table></figure>
+<p>利用sed来批量查找替换文件中的内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed -i &quot;s/http:\/\/test.haivin.com/https:\/\/mayi.test.zhiwyl.com/g&quot; config.php</div></pre></td></tr></table></figure></p>
 <h4 id="tac"><a href="#tac" class="headerlink" title="tac"></a>tac</h4><p>tac 是将 cat 反写过来，所以他的功能就跟 cat 相反， cat 是由第一行到最后一行连续显示在萤幕上，<br>而 tac 则是由最后一行到第一行反向在萤幕上显示出来！</p>
 <h4 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">grep error log-2017-03-09.php</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">grep -o &apos;order-fix.curr_id:[0−9]\+&apos; demo.log    #-o选项只提取order-fix.curr_id:xxx的内容（而不是一整行），并输出到屏幕上</div></pre></td></tr></table></figure>
@@ -135,7 +136,7 @@ cat、tail、head 结合显示一个文件中的某几行(中间几行)
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/17/linux-common/" data-id="cj2vjyhe300027oj5ysok8fyl" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/05/17/linux-common/" data-id="cj2zsgz3y000054j5fqpbl5zg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/commend/">commend</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
@@ -147,7 +148,7 @@ cat、tail、head 结合显示一个文件中的某几行(中间几行)
 <nav id="article-nav">
   
     <a href="/2017/05/19/mysql-base/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Récent</strong>
+      <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
           mysql-base
@@ -157,7 +158,7 @@ cat、tail、head 结合显示一个文件中的某几行(中间几行)
   
   
     <a href="/2017/05/17/mysql/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ancien</strong>
+      <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">mysql 相关</div>
     </a>
   
@@ -172,9 +173,9 @@ cat、tail、head 结合显示一个文件中的某几行(中间几行)
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Catégories</h3>
+    <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mysql/">Mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Server/">Server</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mysql/">Mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Server/">Server</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/vim/">vim</a></li></ul>
     </div>
   </div>
 
@@ -182,9 +183,9 @@ cat、tail、head 结合显示一个文件中的某几行(中间几行)
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Mot-clés</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/commend/">commend</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/server/">server</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/存储引擎/">存储引擎</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/安全/">安全</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/定时器/">定时器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务器/">服务器</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/commend/">commend</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/server/">server</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/存储引擎/">存储引擎</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/安全/">安全</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/定时器/">定时器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务器/">服务器</a></li></ul>
     </div>
   </div>
 
@@ -192,9 +193,9 @@ cat、tail、head 结合显示一个文件中的某几行(中间几行)
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/commend/" style="font-size: 10px;">commend</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/mysql/" style="font-size: 20px;">mysql</a> <a href="/tags/server/" style="font-size: 10px;">server</a> <a href="/tags/存储引擎/" style="font-size: 10px;">存储引擎</a> <a href="/tags/安全/" style="font-size: 10px;">安全</a> <a href="/tags/定时器/" style="font-size: 10px;">定时器</a> <a href="/tags/服务器/" style="font-size: 10px;">服务器</a>
+      <a href="/tags/commend/" style="font-size: 10px;">commend</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/mysql/" style="font-size: 20px;">mysql</a> <a href="/tags/server/" style="font-size: 10px;">server</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/存储引擎/" style="font-size: 10px;">存储引擎</a> <a href="/tags/安全/" style="font-size: 10px;">安全</a> <a href="/tags/定时器/" style="font-size: 10px;">定时器</a> <a href="/tags/服务器/" style="font-size: 10px;">服务器</a>
     </div>
   </div>
 
@@ -211,9 +212,13 @@ cat、tail、head 结合显示一个文件中的某几行(中间几行)
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/05/22/vim/">vim 相关</a>
+          </li>
         
           <li>
             <a href="/2017/05/19/mysql-base/">mysql-base</a>
@@ -231,10 +236,6 @@ cat、tail、head 结合显示一个文件中的某几行(中间几行)
             <a href="/2017/05/17/linux-cron/">Linux定时任务</a>
           </li>
         
-          <li>
-            <a href="/2017/04/21/service/">服务器</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -248,7 +249,7 @@ cat、tail、head 结合显示一个文件中的某几行(中间几行)
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 John Doe<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>

@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -60,6 +60,58 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-vim" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/22/vim/" class="article-date">
+  <time datetime="2017-05-22T06:24:52.432Z" itemprop="datePublished">2017-05-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/vim/">vim</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/22/vim/">vim 相关</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="vim命令记录"><a href="#vim命令记录" class="headerlink" title="vim命令记录"></a>vim命令记录</h3><p>往服务器上面部署东西的时候老是需要用到vim命令，此处做个积累，毕竟年纪大了记性真心不过关，我是不是该多喝六个核桃了。。。哈哈哈</p>
+<h4 id="vim的几种模式"><a href="#vim的几种模式" class="headerlink" title="vim的几种模式"></a>vim的几种模式</h4><p>正常模式：可以使用快捷键命令，或按:输入命令行。<br>插入模式：可以输入文本，在正常模式下，按i、a、o等都可以进入插入模式。<br>可视模式：正常模式下按v可以进入可视模式， 在可视模式下，移动光标可以选择文本。按V进入可视行模式， 总是整行整行的选中。ctrl+v进入可视块模式。<br>替换模式：正常模式下，按R进入。</p>
+<h4 id="启动vim"><a href="#启动vim" class="headerlink" title="启动vim"></a>启动vim</h4><p>vim -c cmd file: 在打开文件前，先执行指定的命令；<br>vim -r file: 恢复上次异常退出的文件；<br>vim -R file: 以只读的方式打开文件，但可以强制保存；<br>vim -M file: 以只读的方式打开文件，不可以强制保存；<br>vim -y num file: 将编辑窗口的大小设为num行；<br>vim + file: 从文件的末尾开始；<br>vim +num file: 从第num行开始；<br>vim +/string file: 打开file，并将光标停留在第一个找到的string上。<br>vim –remote file: 用已有的vim进程打开指定的文件。 如果你不想启用多个vim会话，这个很有用。但要注意， 如果你用vim，会寻找名叫VIM的服务器；如果你已经有一个gvim在运行了， 你可以用gvim –remote file在已有的gvim中打开文件。</p>
+<h4 id="文档操作"><a href="#文档操作" class="headerlink" title="文档操作"></a>文档操作</h4><p>:e file –关闭当前编辑的文件，并开启新的文件。 如果对当前文件的修改未保存，vi会警告。<br>:e! file –放弃对当前文件的修改，编辑新的文件。<br>:e+file – 开始新的文件，并从文件尾开始编辑。<br>:e+n file – 开始新的文件，并从第n行开始编辑。<br>:enew –编译一个未命名的新文档。(CTRL-W n)<br>:e – 重新加载当前文档。<br>:e! – 重新加载当前文档，并丢弃已做的改动。<br>:e#或ctrl+^ – 回到刚才编辑的文件，很实用。<br>:f或ctrl+g – 显示文档名，是否修改，和光标位置。<br>:f filename – 改变编辑的文件名，这时再保存相当于另存为。<br>gf – 打开以光标所在字符串为文件名的文件。<br>:w – 保存修改。<br>:n1,n2w filename – 选择性保存从某n1行到另n2行的内容。<br>:wq – 保存并退出。<br>ZZ – 保存并退出。<br>:x – 保存并退出。<br>:q[uit] ——退出当前窗口。(CTRL-W q或CTRL-W CTRL-Q)<br>:saveas newfilename – 另存为<br>:browse e – 会打开一个文件浏览器让你选择要编辑的文件。 如果是终端中，则会打开netrw的文件浏览窗口； 如果是gvim，则会打开一个图形界面的浏览窗口。 实际上:browse后可以跟任何编辑文档的命令，如sp等。 用browse打开的起始目录可以由browsedir来设置：<br>:set browsedir=last – 用上次访问过的目录（默认）；<br>:set browsedir=buffer – 用当前文件所在目录；<br>:set browsedir=current – 用当前工作目录；<br>:Sex – 水平分割一个窗口，浏览文件系统；<br>:Vex – 垂直分割一个窗口，浏览文件系统；</p>
+<h4 id="光标的移动"><a href="#光标的移动" class="headerlink" title="光标的移动"></a>光标的移动</h4><h5 id="基本移动"><a href="#基本移动" class="headerlink" title="基本移动"></a>基本移动</h5><p>以下移动都是在normal模式下。</p>
+<p>h或退格: 左移一个字符；<br>l或空格: 右移一个字符；<br>j: 下移一行；<br>k: 上移一行；<br>gj: 移动到一段内的下一行；<br>gk: 移动到一段内的上一行；<br>+或Enter: 把光标移至下一行第一个非空白字符。<br>-: 把光标移至上一行第一个非空白字符。<br>w: 前移一个单词，光标停在下一个单词开头；<br>W: 移动下一个单词开头，但忽略一些标点；<br>e: 前移一个单词，光标停在下一个单词末尾；<br>E: 移动到下一个单词末尾，如果词尾有标点，则移动到标点；<br>b: 后移一个单词，光标停在上一个单词开头；<br>B: 移动到上一个单词开头，忽略一些标点；<br>ge: 后移一个单词，光标停在上一个单词末尾；<br>gE: 同 ge ，不过‘单词’包含单词相邻的标点。<br>(: 前移1句。<br>): 后移1句。<br>{: 前移1段。<br>}: 后移1段。<br>fc: 把光标移到同一行的下一个c字符处<br>Fc: 把光标移到同一行的上一个c字符处<br>tc: 把光标移到同一行的下一个c字符前<br>Tc: 把光标移到同一行的上一个c字符后<br>;: 配合f &amp; t使用，重复一次<br>,: 配合f &amp; t使用，反向重复一次<br>上面的操作都可以配合n使用，比如在正常模式(下面会讲到)下输入3h， 则光标向左移动3个字符。</p>
+<p>0: 移动到行首。<br>g0: 移到光标所在屏幕行行首。<br>^: 移动到本行第一个非空白字符。<br>g^: 同 ^ ，但是移动到当前屏幕行第一个非空字符处。<br>$: 移动到行尾。<br>g$: 移动光标所在屏幕行行尾。<br>n|: 把光标移到递n列上。<br>nG: 到文件第n行。<br>:n<cr> 移动到第n行。<br>:$<cr> 移动到最后一行。<br>H: 把光标移到屏幕最顶端一行。<br>M: 把光标移到屏幕中间一行。<br>L: 把光标移到屏幕最底端一行。<br>gg: 到文件头部。<br>G: 到文件尾部。</cr></cr></p>
+<h5 id="翻屏"><a href="#翻屏" class="headerlink" title="翻屏"></a>翻屏</h5><p>ctrl+f: 下翻一屏。<br>ctrl+b: 上翻一屏。<br>ctrl+d: 下翻半屏。<br>ctrl+u: 上翻半屏。<br>ctrl+e: 向下滚动一行。<br>ctrl+y: 向上滚动一行。<br>n%: 到文件n%的位置。<br>zz: 将当前行移动到屏幕中央。<br>zt: 将当前行移动到屏幕顶端。<br>zb: 将当前行移动到屏幕底端。</p>
+<h4 id="剪贴复制"><a href="#剪贴复制" class="headerlink" title="剪贴复制"></a>剪贴复制</h4><p>[n]x: 剪切光标右边n个字符，相当于d[n]l。<br>[n]X: 剪切光标左边n个字符，相当于d[n]h。<br>y: 复制在可视模式下选中的文本。<br>yy or Y: 复制整行文本。<br>y[n]w: 复制一(n)个词。<br>y[n]l: 复制光标右边1(n)个字符。<br>y[n]h: 复制光标左边1(n)个字符。<br>y$: 从光标当前位置复制到行尾。<br>y0: 从光标当前位置复制到行首。<br>:m,ny<cr> 复制m行到n行的内容。<br>y1G或ygg: 复制光标以上的所有行。<br>yG: 复制光标以下的所有行。<br>yaw和yas：复制一个词和复制一个句子，即使光标不在词首和句首也没关系。<br>d: 删除（剪切）在可视模式下选中的文本。<br>d$ or D: 删除（剪切）当前位置到行尾的内容。<br>d[n]w: 删除（剪切）1(n)个单词<br>d[n]l: 删除（剪切）光标右边1(n)个字符。<br>d[n]h: 删除（剪切）光标左边1(n)个字符。<br>d0: 删除（剪切）当前位置到行首的内容<br>[n] dd: 删除（剪切）1(n)行。<br>:m,nd<cr> 剪切m行到n行的内容。<br>d1G或dgg: 剪切光标以上的所有行。<br>dG: 剪切光标以下的所有行。<br>daw和das：剪切一个词和剪切一个句子，即使光标不在词首和句首也没关系。<br>d/f<cr>：这是一个比较高级的组合命令，它将删除当前位置 到下一个f之间的内容。<br>p: 在光标之后粘贴。<br>P: 在光标之前粘贴。</cr></cr></cr></p>
+<h4 id="查找与替换"><a href="#查找与替换" class="headerlink" title="查找与替换"></a>查找与替换</h4><p>/something: 在后面的文本中查找something。<br>?something: 在前面的文本中查找something。<br>/pattern/+number: 将光标停在包含pattern的行后面第number行上。<br>/pattern/-number: 将光标停在包含pattern的行前面第number行上。<br>n: 向后查找下一个。<br>N: 向前查找下一个。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/05/22/vim/" data-id="cj2zsgz4m000954j5e5bsfvfl" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vim/">vim</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-mysql-base" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -98,7 +150,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/19/mysql-base/" data-id="cj2vjyhek00077oj5h7uzbr34" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/05/19/mysql-base/" data-id="cj2zsgz4c000454j5w8fytout" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/存储引擎/">存储引擎</a></li></ul>
@@ -149,6 +201,7 @@
 <p>注意：&gt;意思是创建，&gt;&gt;是追加。千万不要弄混了。</p>
 <h4 id="sed"><a href="#sed" class="headerlink" title="sed"></a>sed</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed -n &apos;5,10p&apos; filename</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed -n &apos;/^2011-08-23.*ERROR/p&apos; demolog.log</div></pre></td></tr></table></figure>
+<p>利用sed来批量查找替换文件中的内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sed -i &quot;s/http:\/\/test.haivin.com/https:\/\/mayi.test.zhiwyl.com/g&quot; config.php</div></pre></td></tr></table></figure></p>
 <h4 id="tac"><a href="#tac" class="headerlink" title="tac"></a>tac</h4><p>tac 是将 cat 反写过来，所以他的功能就跟 cat 相反， cat 是由第一行到最后一行连续显示在萤幕上，<br>而 tac 则是由最后一行到第一行反向在萤幕上显示出来！</p>
 <h4 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">grep error log-2017-03-09.php</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">grep -o &apos;order-fix.curr_id:[0−9]\+&apos; demo.log    #-o选项只提取order-fix.curr_id:xxx的内容（而不是一整行），并输出到屏幕上</div></pre></td></tr></table></figure>
@@ -170,7 +223,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/17/linux-common/" data-id="cj2vjyhe300027oj5ysok8fyl" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/05/17/linux-common/" data-id="cj2zsgz3y000054j5fqpbl5zg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/commend/">commend</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
@@ -219,7 +272,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/17/mysql/" data-id="cj2vjyhed00057oj56dbrwkxd" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/05/17/mysql/" data-id="cj2zsgz4e000554j5lq0uqxcb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/安全/">安全</a></li></ul>
@@ -270,7 +323,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/17/linux-cron/" data-id="cj2vjyhdz00017oj5q3c6yvxn" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/05/17/linux-cron/" data-id="cj2zsgz4p000b54j5ag9yl4us" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/定时器/">定时器</a></li></ul>
@@ -316,7 +369,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/04/21/service/" data-id="cj2vjyheh00067oj5lmhxl17v" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/04/21/service/" data-id="cj2zsgz4i000654j5h6rmm1hu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/server/">server</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/服务器/">服务器</a></li></ul>
@@ -363,7 +416,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/17/hello-world/" data-id="cj2vjyhdr00007oj5j58hhwwo" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/02/17/hello-world/" data-id="cj2zsgz44000154j5hks6hfrb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -380,9 +433,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Catégories</h3>
+    <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mysql/">Mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Server/">Server</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mysql/">Mysql</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Server/">Server</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/vim/">vim</a></li></ul>
     </div>
   </div>
 
@@ -390,9 +443,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Mot-clés</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/commend/">commend</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/server/">server</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/存储引擎/">存储引擎</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/安全/">安全</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/定时器/">定时器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务器/">服务器</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/commend/">commend</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/server/">server</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/">vim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/存储引擎/">存储引擎</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/安全/">安全</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/定时器/">定时器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务器/">服务器</a></li></ul>
     </div>
   </div>
 
@@ -400,9 +453,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/commend/" style="font-size: 10px;">commend</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/mysql/" style="font-size: 20px;">mysql</a> <a href="/tags/server/" style="font-size: 10px;">server</a> <a href="/tags/存储引擎/" style="font-size: 10px;">存储引擎</a> <a href="/tags/安全/" style="font-size: 10px;">安全</a> <a href="/tags/定时器/" style="font-size: 10px;">定时器</a> <a href="/tags/服务器/" style="font-size: 10px;">服务器</a>
+      <a href="/tags/commend/" style="font-size: 10px;">commend</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/mysql/" style="font-size: 20px;">mysql</a> <a href="/tags/server/" style="font-size: 10px;">server</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/存储引擎/" style="font-size: 10px;">存储引擎</a> <a href="/tags/安全/" style="font-size: 10px;">安全</a> <a href="/tags/定时器/" style="font-size: 10px;">定时器</a> <a href="/tags/服务器/" style="font-size: 10px;">服务器</a>
     </div>
   </div>
 
@@ -419,9 +472,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/05/22/vim/">vim 相关</a>
+          </li>
         
           <li>
             <a href="/2017/05/19/mysql-base/">mysql-base</a>
@@ -439,10 +496,6 @@
             <a href="/2017/05/17/linux-cron/">Linux定时任务</a>
           </li>
         
-          <li>
-            <a href="/2017/04/21/service/">服务器</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -456,7 +509,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 John Doe<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
