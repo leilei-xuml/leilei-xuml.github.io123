@@ -3,21 +3,14 @@
 <head>
   <meta charset="utf-8">
   
-  <title>mysql 相关 | Hexo</title>
+  <title>Mot-clé: 索引 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本文记录一些mysql的一些小的知识点。
-sql注入所谓SQL注入，就是通过把SQL命令插入到Web表单提交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令。具体来说，它是利用现有应用程序，将（恶意的）SQL命令注入到后台数据库引擎执行的能力，它可以通过在Web表单中输入（恶意）SQL语句得到一个存在安全漏洞的网站上的数据库，而不是按照设计者意图去执行SQL语句。[1]">
-<meta property="og:type" content="article">
-<meta property="og:title" content="mysql 相关">
-<meta property="og:url" content="http://yoursite.com/2017/05/17/mysql/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/tags/索引/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="本文记录一些mysql的一些小的知识点。
-sql注入所谓SQL注入，就是通过把SQL命令插入到Web表单提交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令。具体来说，它是利用现有应用程序，将（恶意的）SQL命令注入到后台数据库引擎执行的能力，它可以通过在Web表单中输入（恶意）SQL语句得到一个存在安全漏洞的网站上的数据库，而不是按照设计者意图去执行SQL语句。[1]">
-<meta property="og:updated_time" content="2017-05-17T08:26:07.303Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mysql 相关">
-<meta name="twitter:description" content="本文记录一些mysql的一些小的知识点。
-sql注入所谓SQL注入，就是通过把SQL命令插入到Web表单提交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令。具体来说，它是利用现有应用程序，将（恶意的）SQL命令注入到后台数据库引擎执行的能力，它可以通过在Web表单中输入（恶意）SQL语句得到一个存在安全漏洞的网站上的数据库，而不是按照设计者意图去执行SQL语句。[1]">
+<meta name="twitter:title" content="Hexo">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -66,73 +59,39 @@ sql注入所谓SQL注入，就是通过把SQL命令插入到Web表单提交或�
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-mysql" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/05/17/mysql/" class="article-date">
-  <time datetime="2017-05-17T06:51:10.513Z" itemprop="datePublished">2017-05-17</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Mysql/">Mysql</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+        <section id="main">
   
-    <h1 class="article-title" itemprop="name">
-      mysql 相关
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2017/05/19/mysql-index/" class="archive-article-date">
+  <time datetime="2017-05-19T07:08:50.000Z" itemprop="datePublished">May 19</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/05/19/mysql-index/">mysql-base</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文记录一些mysql的一些小的知识点。</p>
-<h3 id="sql注入"><a href="#sql注入" class="headerlink" title="sql注入"></a>sql注入</h3><p>所谓SQL注入，就是通过把SQL命令插入到Web表单提交或输入域名或页面请求的查询字符串，最终达到欺骗服务器执行恶意的SQL命令。具体来说，它是利用现有应用程序，将（恶意的）SQL命令注入到后台数据库引擎执行的能力，它可以通过在Web表单中输入（恶意）SQL语句得到一个存在安全漏洞的网站上的数据库，而不是按照设计者意图去执行SQL语句。[1]  比如先前的很多影视网站泄露VIP会员密码大多就是通过WEB表单递交查询字符暴出的，这类表单特别容易受到SQL注入式攻击。</p>
-<h5 id="下面是一些示例"><a href="#下面是一些示例" class="headerlink" title="下面是一些示例"></a>下面是一些示例</h5><ol>
-<li>后台身份验证绕过漏洞</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SELECT * FROM zb_user WHERE email=<span class="string">''</span> or 1=1<span class="comment">#' AND `password`=12344555</span></div></pre></td></tr></table></figure>
-<p>利用单引号和双引号以及注释字数or等条件在构造where条件</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/17/mysql/" data-id="cj319yxv8000gq4j5aheakuzg" class="article-share-link">Partager</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/安全/">安全</a></li></ul>
-
-    </footer>
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2017/05/17/linux-common/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Récent</strong>
-      <div class="article-nav-title">
-        
-          Linux命令
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2017/05/17/linux-cron/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ancien</strong>
-      <div class="article-nav-title">Linux定时任务</div>
-    </a>
-  
-</nav>
-
-  
 </article>
+  
+  
+    </div></section>
+  
 
 </section>
         
